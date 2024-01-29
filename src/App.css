@@ -1,0 +1,110 @@
+/* App.css */
+.app-container {
+  position: relative;
+  height: 100vh;
+  text-align: center; /* Center text in the container */
+}
+
+.main-label {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 200px;
+}
+
+.moving-button,
+.static-button {
+  position: absolute;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.moving-button {
+  background-color: lightblue;
+}
+
+.static-button {
+  background-color: lightgreen;
+}
+
+.label {
+  position: absolute;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  animation: slideInAndGrow 2s ease-in-out; /* Slide-in and grow animation */
+  opacity: 1;
+}
+
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./images/backgroundHeart.webp');
+  /* Replace with your image file path */
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+@keyframes slideInAndGrow {
+  from {
+    transform: translateY(100%) scale(1);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(-20vh) scale(1.5);
+    /* Adjust the translateY value */
+    opacity: 1;
+  }
+}
+
+.slide-to-center {
+  animation: slideToCenter 2s ease-in-out forwards;
+}
+
+@keyframes slideToCenter {
+  from {
+    transform: translateY(-20vh) scale(1.5);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(50%) scale(2);
+    /* Adjust translateY and scale values */
+    opacity: 1;
+  }
+}
+
+.center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 36px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  font-family: 'Arial', sans-serif; /* Replace with your desired font */
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out 2s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Added background colors for labels */
+.label-thank-you {
+  background-color: black;
+  color: white;
+}
+
+.label-love-you {
+  background-color: black;
+  color: white;
+}
