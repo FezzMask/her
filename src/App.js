@@ -39,7 +39,7 @@ const App = () => {
 
   return (
     <div className="app-container">
-      {showTestLabel && <p className="main-label">Test1</p>}
+      {showTestLabel && <p className="main-label">Do you love me?</p>}
       {showButtons && (
         <React.Fragment>
           <button
@@ -67,7 +67,7 @@ const App = () => {
         </p>
       )}
       {showSlideToCenter && (
-        <div className="center-text label-love-you">I LOVE YOU ❤️ </div>
+        <div className="center-text label-love-you">I LOVE YOU NASSIMA ❤️ </div>
       )}
       {showBackgroundImage && (
         <div className="background-image" />
